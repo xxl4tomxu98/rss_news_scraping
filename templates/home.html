@@ -1,6 +1,9 @@
 
 {% extends 'base.html' %}
 {% block content %}
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1>Welcome to the RSS Scraped Messages!</h1>
+    </div>
     {% for article in articles %}
     <div class="content-section" style="background: #fff;padding: 20px;box-shadow: 0px 0px 0 1px rgb(0 0 0 / 12%);">
         <div class="pd-20">
