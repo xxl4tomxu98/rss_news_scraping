@@ -1,5 +1,13 @@
-# home.html
+
 {% extends 'base.html' %}
 {% block content %}
-Hello World
+    {% for article in articles %}
+    <div class="content-section" style="background: #fff;padding: 20px;box-shadow: 0px 0px 0 1px rgb(0 0 0 / 12%);">
+        <div class="pd-20">
+            <h2><a>{{ article.title }}</a></h2>
+            <h3>{{ article.link }}</h3>            
+            <p>From <a>{{ article.source }}</a> on {{ article.published }}</p>            
+        </div>
+    </div>   
+    {% endfor %}
 {% endblock content %}

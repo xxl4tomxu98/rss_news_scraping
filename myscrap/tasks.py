@@ -8,7 +8,7 @@ from .models import News
 @shared_task(serializer='json')
 def save_function(article_list):
     print('starting save items')
-    new_count = 0
+    news_count = 0
 
     for article in article_list:
         try:
@@ -18,7 +18,7 @@ def save_function(article_list):
                 published = article['published'],
                 source = article['source']
             )
-            new_count += 1
+            news_count += 1
         except Exception as e:
             print('failed at latest_article is none')
             print(e)
